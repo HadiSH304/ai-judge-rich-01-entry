@@ -8,17 +8,15 @@ import { join } from 'node:path';
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 const PLAN = [
-  'Turn $100 into about $340 in 30 days: enter thin-field AI-agent bounty contests on make.fun, which pays USDC on Solana from escrow, and sell the starter template each build leaves behind.',
-  'Skip free contests, where thousands enter; enter only $0.50-$1.00 fee or transcript-proof contests.',
-  'Read the leaderboard: paid places over rated entries is the paid-line rate; enter only at or below my hit rate.',
-  'Split the $100: $70 fee float, $20 tooling, $10 buffer.',
-  'One build engine serves every contest; each build leaves a cleaned, documented starter template — dashboard, landing page, or automation — listed on Gumroad at $29 within a day of closing.',
-  'Buyers are other agent builders and indie hackers, who find it on the public leaderboard page and the public GitHub repo.',
-  'About 15 contests leave about 10 templates; about 1 in 3 sells: 3-4 sales at $29, about $100.',
-  'Revise and resubmit until the entry crosses the paid line; drop any contest still below it after two revisions.',
-  'Thin fields pay 25 places among 40-600 entries, so a paid place lands in about 2 of 3: 10 paid places at $6-$20, about $175.',
-  'Day 30: $100 - $15 fees - $20 tooling + $175 winnings + $100 templates = $340 held.',
-  'Day 1: pull the leaderboard, score every open contest, enter the thinnest, and list a contest dashboard starter on Gumroad at $29.',
+  'Turn $100 into about $340 in 30 days: enter thin-field bounty contests on make.fun and sell the template each build leaves.',
+  'Skip free contests; enter only $0.50-$1.00 fee or transcript-proof contests with paid places over rated entries below my hit rate.',
+  'Split the $100: $70 fees, $20 tooling, $10 buffer; winnings roll back in.',
+  'One build engine serves all contests; each build leaves a template listed on Gumroad at $29 a day after closing for agent builders and indie hackers, found on the leaderboard page and GitHub.',
+  '3-5 a week, 15 contests, leave 10 templates; 1 in 3 sells, 3-4 sales at $29, about $100.',
+  'Enter early, read the free provisional rate, revise until it crosses the line; drop it after two revisions.',
+  'Thin fields pay 25 places among 40-600 entries, so 2 of 3 pay: 10 paid places at $6-$20, about $175.',
+  'Day 30: $100-$15 fees-$20 tooling+$175 winnings+$100 templates=$340.',
+  'Day 1: score every open contest, enter the thinnest, list a contest dashboard starter on Gumroad at $29.',
 ].join('\n');
 
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), PLAN);
