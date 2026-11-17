@@ -2,7 +2,7 @@
 // that writes one plan to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR).
 // The plan: only committed money, chosen by the numbers (v3 concept change).
 
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
@@ -19,4 +19,6 @@ const PLAN = [
   'Stop: drop a board with no acceptance in 5 days; drop a task whose claims pass 5 before my PR lands; drop KYC work.',
 ].join('\n');
 
+// Create the output directory if the grader's sandbox hands us a fresh one.
+mkdirSync(OUTPUT_DIR, { recursive: true });
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), PLAN);
